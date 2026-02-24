@@ -271,7 +271,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
    
 1. Wait for the DNS zone to deploy and then select **Go to resource**.
 
-1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step. 
+1. On the **Overview** blade notice the names of the four Azure DNS name servers assigned to the zone. **Copy** one of the name server addresses. You will need it in a future step for the nslookup command below.. 
   
 1. Expand the **DNS Management** blade and select **Recordsets**. Click **+Add**. 
 
@@ -289,7 +289,7 @@ You can configure Azure DNS to resolve host names in your public domain. For exa
 1. Open a command prompt, and run the following command. If you have changed the domain name, make an adjustment. 
 
    ```sh
-   nslookup www.contoso.com <name server name>
+   nslookup www.contoso.com <name server name you copied in step 6 above>
    ```
 1. Verify the host name www.contoso.com resolves to the IP address you provided. This confirms name resolution is working correctly.
 
@@ -370,6 +370,7 @@ Congratulations on completing the lab. Here are the main takeaways for this lab.
 + A network security group contains security rules that allow or deny network traffic. There are default incoming and outgoing rules which you can customize to your needs.
 + Application security groups are used to protect groups of servers with a common function, such as web servers or database servers.
 + Azure DNS is a hosting service for DNS domains that provides name resolution. You can configure Azure DNS to resolve host names in your public domain.  You can also use private DNS zones to assign DNS names to virtual machines (VMs) in your Azure virtual networks.
+
 
 
 
