@@ -60,11 +60,12 @@ In this task, you will use a template to deploy one virtual network, one network
     | ---           | ---           |
     | Subscription  | your Azure subscription |
     | Resource group | `az104-rg6` (If necessary, select **Create new**) |
+    | VM size | Select an available size. Use **Standard_D2s_v5** if available. |
     | Password      | Provide a secure password |
 
-    >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
-
 1. Select **Review + create** and then select **Create**.
+
+    > **Note:** The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **az104-rg6**, repeat the deployment, and select **Standard_D2s_v6**. If that deployment fails for the same reason, delete the resource group and retry with **Standard_D2s_v7**.
 
     >**Note**: Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
 

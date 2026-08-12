@@ -61,10 +61,14 @@ In this task, you deploy a virtual machine and the resources required to collect
    | Subscription | Your Azure subscription |
    | Resource group | **az104-rg11**; create it if necessary |
    | Region | **East US** |
+   | VM size | Select an available size. Use **Standard_D2s_v5** if available. |
    | Username | `localadmin` |
    | Password | A complex password |
 
 1. Select **Review + create**, and then select **Create**.
+
+   > [!NOTE]
+   > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, check whether **az104-rg11** was created. If it exists, delete the resource group, repeat the deployment, and select **Standard_D2s_v6**. If that deployment fails for the same reason, delete the resource group and retry with **Standard_D2s_v7**.
 
 1. Wait for the deployment to finish, and then select **Go to resource group**.
 

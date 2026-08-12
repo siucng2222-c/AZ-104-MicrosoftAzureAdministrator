@@ -66,13 +66,13 @@ In this task, you will deploy two Azure virtual machines into different availabi
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Azure Spot instance | **unchecked** |
-    | Size | **Standard D2s v3** |
+    | Size | **Standard D2s v5** |
     | Username | `localadmin` |
     | Password | **Provide a secure password** |
     | Public inbound ports | **None** |
     | Would you like to use an existing Windows Server license? | **Unchecked** |
     
-    >**NOTE**: If the deployment fails, change to another region and try again. This is due to quotas in different regions.
+    > **NOTE:** Use **Standard D2s v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard D2s v6**. If that size is also unavailable, select **Standard D2s v7**. If deployment fails because of a quota limit, choose a different region.
 
     ![Screenshot of the create vm page.](../media/az104-lab08-create-vm.png)
 
@@ -121,9 +121,9 @@ In this task, you will scale a virtual machine by adjusting its size to a differ
 
 1. Once the VM shows as **Stopped (deallocated)**, in the **Availability + scale** blade, select **Size**.
 
-1. Set the virtual machine size to **D2ds_v4** and click **Resize**. When prompted, confirm the change.
+1. Set the virtual machine size to **D4s_v5** and click **Resize**. When prompted, confirm the change.
 
-    >**Note**: Choose another size if **D2ds_v4** is not available. Resizing is also known as vertical scaling, up or down.
+    > **Note:** The virtual machine was created with **D2s_v5**. Resizing to **D4s_v5** increases it from 2 vCPUs and 8 GiB of memory to 4 vCPUs and 16 GiB of memory. If **D4s_v5** is unavailable, use **D4s_v6**. If that size is also unavailable, use **D4s_v7**. Resizing is also known as vertical scaling, up or down.
 
     ![Screenshot of the resize the virtual machine.](../media/az104-lab08-resize-vm.png)
 
@@ -189,10 +189,12 @@ In this task, you will deploy an Azure virtual machine scale set across availabi
     | Scaling options | **Review and take the defaults**. We will change this in the next task. |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
     | Run with Azure Spot discount | **Unchecked** |
-    | Size | **Standard D2s_v3** |
+    | Size | **Standard D2s_v5** |
     | Username | `localadmin` |
     | Password | **Provide a secure password**  |
     | Already have a Windows Server license? | **Unchecked** |
+
+    > **Note:** Use **Standard D2s_v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard D2s_v6**. If that size is also unavailable, select **Standard D2s_v7**.
 
     >**Note**: For the list of Azure regions which support deployment of Windows virtual machines to availability zones, refer to [What are Availability Zones in Azure?](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
@@ -353,9 +355,11 @@ In this task, you scale the virtual machine scale set using a custom scale rule.
     -Location 'East US' `
     -Image 'Win2019Datacenter' `
     -Zone '1' `
-    -Size 'Standard_D2s_v3' `
+    -Size 'Standard_D2s_v5' `
     -Credential (Get-Credential)
     ```
+
+    > **Note:** If **Standard_D2s_v5** is unavailable, rerun the command with **Standard_D2s_v6**. If that size is also unavailable, use **Standard_D2s_v7**.
 
 1. Once the command completes, use **Get-AzVM** to list the virtual machines in your resource group.
 

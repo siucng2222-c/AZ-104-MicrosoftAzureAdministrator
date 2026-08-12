@@ -34,6 +34,22 @@
             "defaultValue": "az104-06-nsg1",
             "type": "String"
         },
+        "vmSize": {
+            "type": "String",
+            "defaultValue": "Standard_D2s_v5",
+            "allowedValues": [
+                "Standard_D2s_v5",
+                "Standard_D2s_v6",
+                "Standard_D2s_v7"
+            ],
+            "metadata": {
+                "description": "Select a VM size available in the deployment region."
+            }
+        },
+        "adminUsername": {
+            "type": "String",
+            "defaultValue": "localadmin"
+        },
         "adminPassword": {
             "defaultValue": null,
             "type": "securestring"
@@ -146,7 +162,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v3"
+                    "vmSize": "[parameters('vmSize')]"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -167,7 +183,7 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm0_name')]",
-                    "adminUsername": "localadmin",
+                    "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
@@ -203,7 +219,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v3"
+                    "vmSize": "[parameters('vmSize')]"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -224,7 +240,7 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm1_name')]",
-                    "adminUsername": "localadmin",
+                    "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,
@@ -260,7 +276,7 @@
             ],
             "properties": {
                 "hardwareProfile": {
-                    "vmSize": "Standard_D2s_v3"
+                    "vmSize": "[parameters('vmSize')]"
                 },
                 "storageProfile": {
                     "imageReference": {
@@ -280,7 +296,7 @@
                 },
                 "osProfile": {
                     "computerName": "[parameters('virtualMachines_az104_06_vm2_name')]",
-                    "adminUsername": "localadmin",
+                    "adminUsername": "[parameters('adminUsername')]",
                     "adminPassword": "[parameters('adminPassword')]",
                     "windowsConfiguration": {
                         "provisionVMAgent": true,

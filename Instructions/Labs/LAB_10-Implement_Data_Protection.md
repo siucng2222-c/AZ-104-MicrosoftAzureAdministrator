@@ -71,10 +71,13 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
     | Subscription  | Your Azure subscription |
     | Resource group| `az104-rg-region1` (If necessary, select **Create new**) |
     | Region        | **East US**   |
+    | VM size       | Select an available size. Use **Standard_D2s_v5** if available. |
     | Username      | **localadmin**   |
     | Password      | Provide a complex password |
 
 1. Select **Review + Create**, then select **Create**.
+
+    > **Note:** The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **az104-rg-region1**, repeat the deployment, and select **Standard_D2s_v6**. If that deployment fails for the same reason, delete the resource group and retry with **Standard_D2s_v7**.
 
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 

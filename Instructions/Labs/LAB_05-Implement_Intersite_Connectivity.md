@@ -62,10 +62,12 @@ In this task, you create a core services virtual network with a virtual machine.
     | Availability options | No infrastructure redundancy required |
     | Security type | **Standard** |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** (notice your other choices) |
-    | Size | **Standard_D2s_v3** |
+    | Size | **Standard_D2s_v5** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
+
+    > **Note:** Use **Standard_D2s_v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**.
 
     ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
    
@@ -109,12 +111,12 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Security type | **Standard** |
     | Availability options | No infrastructure redundancy required |
     | Image (See all images) | **Windows Server 2025 Datacenter - x64 Gen2** |
-    | Size | **Standard_D2s_v3** | 
+    | Size | **Standard_D2s_v5** |
     | Username | `localadmin` | 
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
 
-    >**Note:** If deployment fails due to capacity or quota limits, adjust the configuration or choose a different region.
+    > **Note:** Use **Standard_D2s_v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**. If deployment fails because of a quota limit, choose a different region.
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
