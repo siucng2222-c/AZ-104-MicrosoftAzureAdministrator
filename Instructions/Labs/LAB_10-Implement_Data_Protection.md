@@ -77,7 +77,8 @@ In this task, you will use a template to deploy a virtual machine. The virtual m
 
 1. Select **Review + Create**, then select **Create**.
 
-    > **Note:** The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, delete **az104-rg-region1**, repeat the deployment, and select **Standard_D2s_v6**. If that deployment fails for the same reason, delete the resource group and retry with **Standard_D2s_v7**.
+    > [!NOTE]
+    > The template provides three current VM sizes. Use **Standard_D2s_v5** first. If the deployment fails because the size is unavailable or Azure lacks capacity, check whether **az104-rg-region1** was created. If it exists, delete the resource group, repeat the deployment, and select **Standard_D2s_v6**. If that deployment fails for the same reason, delete the resource group and retry with **Standard_D2s_v7**.
 
     >**Note:** Wait for the template to deploy, then select **Go to resource**. You should have one virtual machine in one virtual network. 
 

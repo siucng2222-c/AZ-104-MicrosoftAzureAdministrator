@@ -67,7 +67,8 @@ In this task, you create a core services virtual network with a virtual machine.
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
 
-    > **Note:** Use **Standard_D2s_v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**.
+    > [!NOTE]
+    > Use **Standard_D2s_v5** first. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**.
 
     ![Screenshot of Basic virtual machine creation page. ](../media/az104-lab05-createcorevm.png)
    
@@ -116,7 +117,8 @@ In this task, you create a manufacturing services virtual network with a virtual
     | Password | **Provide a complex password** |
     | Public inbound ports | **None** |
 
-    > **Note:** Use **Standard_D2s_v5** if available. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**. If deployment fails because of a quota limit, choose a different region.
+    > [!NOTE]
+    > Use **Standard_D2s_v5** first. If the size is unavailable or Azure lacks capacity, select **Standard_D2s_v6**. If that size is also unavailable, select **Standard_D2s_v7**.
 
 1. On the **Disks** tab take the defaults and then select **Next : Networking >**.
 
