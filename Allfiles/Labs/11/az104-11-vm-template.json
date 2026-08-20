@@ -51,14 +51,12 @@
     },
     "imageSKU": {
       "type": "string",
-      "defaultValue": "2019-Datacenter",
+      "defaultValue": "2022-datacenter-g2",
       "allowedValues": [
-        "2019-Datacenter",
-        "2019-Datacenter-Server-Core",
-        "2019-Datacenter-Server-Core-smalldisk"
+        "2022-datacenter-g2"
       ],
       "metadata": {
-        "description": "Image SKU"
+        "description": "Generation 2 image required for the available VM sizes."
       }
     },
     "vmSize": {
