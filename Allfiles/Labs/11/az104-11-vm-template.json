@@ -51,21 +51,24 @@
     },
     "imageSKU": {
       "type": "string",
-      "defaultValue": "2019-Datacenter",
+      "defaultValue": "2022-datacenter-g2",
       "allowedValues": [
-        "2019-Datacenter",
-        "2019-Datacenter-Server-Core",
-        "2019-Datacenter-Server-Core-smalldisk"
+        "2022-datacenter-g2"
       ],
       "metadata": {
-        "description": "Image SKU"
+        "description": "Generation 2 image required for the available VM sizes."
       }
     },
     "vmSize": {
       "type": "string",
       "defaultValue": "Standard_D2s_v5",
+      "allowedValues": [
+        "Standard_D2s_v5",
+        "Standard_D2s_v6",
+        "Standard_D2s_v7"
+      ],
       "metadata": {
-        "description": "VM size"
+        "description": "Select a VM size available in the deployment region."
       }
     },
     "virtualNetworkName": {
